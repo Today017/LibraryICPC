@@ -1,9 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-#ifdef LOCAL
-#include <atcoder/all>
-// debug関係
+#include "../kyopro_library/data_structure/fen.hpp"
+#include "../kyopro_library/data_structure/segt.hpp"
+#include "../kyopro_library/data_structure/segtlz.hpp"
 template <typename T1, typename T2>
 ostream &operator<<(ostream &os, const pair<T1, T2> &p) {
     os << "( " << p.first << ", " << p.second << " )";
@@ -130,11 +129,22 @@ ostream &operator<<(ostream &os, priority_queue<T> A) {
     return os;
 }
 template <typename T>
-ostream &operator<<(ostream &os, atcoder::fenwick_tree<T> A) {
-    int n = A._n;
+ostream &operator<<(ostream &os, priority_queue<T, vector<T>, greater<>> A) {
+    int n = A.size();
+    os << "[ ";
+    while (!A.empty()) {
+        os << A.top() << ", ";
+        A.pop();
+    }
+    os << " ]";
+    return os;
+}
+template <typename T>
+ostream &operator<<(ostream &os, fenwick_tree<T> a) {
+    int n = a.size();
     os << "[ ";
     for (int i = 0; i < n; i++) {
-        os << A.sum(i, i + 1);
+        os << a[i];
         if (i != n - 1) {
             os << ", ";
         }
@@ -142,12 +152,12 @@ ostream &operator<<(ostream &os, atcoder::fenwick_tree<T> A) {
     os << " ]";
     return os;
 }
-template <typename S, S (*op)(S, S), S (*e)()>
-ostream &operator<<(ostream &os, atcoder::segtree<S, op, e> A) {
-    int n = A._n;
+template <typename T>
+ostream &operator<<(ostream &os, segment_tree<T> a) {
+    int n = a.size();
     os << "[ ";
     for (int i = 0; i < n; i++) {
-        os << A.prod(i, i + 1);
+        os << a[i];
         if (i != n - 1) {
             os << ", ";
         }
@@ -155,17 +165,17 @@ ostream &operator<<(ostream &os, atcoder::segtree<S, op, e> A) {
     os << " ]";
     return os;
 }
-ostream &operator<<(ostream &os, atcoder::dsu ds) {
-    os << ds.groups();
-    return os;
-}
-ostream &operator<<(ostream &os, atcoder::modint998244353 x) {
-    os << x.val();
-
-    return os;
-}
-ostream &operator<<(ostream &os, atcoder::modint1000000007 x) {
-    os << x.val();
+template <typename T, typename U>
+ostream &operator<<(ostream &os, segment_tree_lazy<T, U> a) {
+    int n = a.size();
+    os << "[ ";
+    for (int i = 0; i < n; i++) {
+        os << a[i];
+        if (i != n - 1) {
+            os << ", ";
+        }
+    }
+    os << " ]";
     return os;
 }
 
@@ -188,40 +198,3 @@ void debug_print(int i, const T1 &name, const T2 &a, const T3 &...b) {
     cerr << "\033[0m";
     debug_print(i + 1, name, b...);
 }
-#else
-#define debug(...) (void(0))
-#define print_line (void(0))
-#endif
-
-// debug以外
-
-// aよりもbが大きいならばaをbで更新する
-// (更新されたならばtrueを返す)
-template <typename T>
-bool chmax(T &a, const T& b) {
-    if (a < b) {
-        a = b;  // aをbで更新
-        return true;
-    }
-    return false;
-}
-// aよりもbが小さいならばaをbで更新する
-// (更新されたならばtrueを返す)
-template <typename T>
-bool chmin(T &a, const T& b) {
-    if (a > b) {
-        a = b;  // aをbで更新
-        return true;
-    }
-    return false;
-}
-
-using ll = long long;
-using vi = vector<int>;
-using vl = vector<ll>;
-using pi = pair<int,int>;
-using pl = pair<ll,ll>;
-const int INF = 1e9 + 10;
-const ll INFL = 4e18;
-#define rep(i, a, b) for (ll i = (a); i < (ll)(b); i++)
-#define all(x) x.begin(),x.end()
