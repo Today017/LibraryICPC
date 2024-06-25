@@ -87,6 +87,7 @@ struct Line {
 
 struct Segment : Line {
     Segment() = default;
+    using Line::Line;
 };
 
 struct Circle {
