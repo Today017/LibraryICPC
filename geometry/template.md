@@ -77,7 +77,7 @@ enum Orientation {
 `bool isParallel(Line(Segment) l1, Line(Segment) l2)`
 - 平行判定
 
-`bool isParallel(Line(Segment) l1, Line(Segment) l2)`
+`bool isOrthogonal(Line(Segment) l1, Line(Segment) l2)`
 - 垂直判定
 
 ---
