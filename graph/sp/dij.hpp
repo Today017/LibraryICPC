@@ -1,5 +1,3 @@
-#include "../../../kyopro_library/template.hpp"
-
 vector<ll> dijkstra(const vector<vector<pair<int, ll>>> &G, int start = 0) {
     int n = G.size();
     vector<ll> dst(n, INFL);

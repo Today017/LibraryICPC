@@ -1,4 +1,4 @@
-#include "../../kyopro_library/template.hpp"
+
 
 ll pow_mod(ll x, ll n, ll mod) {
     ll ret = 1;

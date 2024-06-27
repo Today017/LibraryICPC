@@ -1,4 +1,4 @@
-#include "../../kyopro_library/template.hpp"
+
 
 template <typename T = ll>
 struct fraction {

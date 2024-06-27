@@ -1,4 +1,4 @@
-#include "../../kyopro_library/template.hpp"
+
 
 vector<int> generate_primes(int n) {
     vector<int> ret;

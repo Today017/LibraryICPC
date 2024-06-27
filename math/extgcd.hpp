@@ -1,4 +1,4 @@
-#include "../../kyopro_library/template.hpp"
+
 
 tuple<ll, ll, ll> extgcd(ll a, ll b) {
     if (b == 0) {

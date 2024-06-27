@@ -1,4 +1,4 @@
-#include "../../kyopro_library/template.hpp"
+
 
 struct SCC {
     vector<vector<int>> members, graph_decomposed;

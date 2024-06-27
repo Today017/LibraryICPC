@@ -1,5 +1,3 @@
-#include "../../../kyopro_library/template.hpp"
-
 void warshall_floyd(vector<vector<ll>> &G) {
     int n = G.size();
     for (int k = 0; k < n; k++) {

@@ -1,4 +1,4 @@
-#include "../../kyopro_library/template.hpp"
+
 
 vector<ll> factors(ll x){
     vector<ll> fs;

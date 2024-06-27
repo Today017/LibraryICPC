@@ -1,4 +1,4 @@
-#include "../../kyopro_library/template.hpp"    
+    
 
 struct rolling_hash {
     rolling_hash(const string &s, vector<ll> base = {}) {

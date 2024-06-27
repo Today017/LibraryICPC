@@ -1,4 +1,4 @@
-#include "../../kyopro_library/template.hpp"
+
 
 ll modlog(ll x, ll y, ll mod) {
     ll m = ceil(sqrt(mod)) + 1;

@@ -81,6 +81,9 @@
 - [Run Length Encoding](./string/rle.md)
 - [Rolling Hash](./string/rh.md)
 
+## Geometry
+- [All](./geometry/template.md)
+
 ## Others
 - [Random Generator](./others/random.md)
 - [Timer](./others/timer.md)

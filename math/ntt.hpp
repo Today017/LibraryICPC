@@ -1,4 +1,4 @@
-#include "../../kyopro_library/template.hpp"
+
 #include "../../kyopro_library/mod/modint.hpp"
 
 namespace ntt998 {

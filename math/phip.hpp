@@ -1,4 +1,4 @@
-#include "../../kyopro_library/template.hpp"
+
 
 vector<ll> euler_phi(ll n) {
     vector<ll> phi(n + 1);

@@ -1,5 +1,3 @@
-#include "../../../kyopro_library/template.hpp"
-
 pair<bool, vector<ll>> bellman_ford(const vector<vector<pair<int, ll>>> &G, int start) {
     int n = G.size();
     vector<ll> dst(n, INFL);

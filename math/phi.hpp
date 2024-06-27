@@ -1,4 +1,4 @@
-#include "../../kyopro_library/template.hpp"
+
 
 ll euler_phi(ll n) {
     ll ret = n;

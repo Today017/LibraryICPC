@@ -48,7 +48,7 @@
 
 ```cpp
 #pragma once
-#include "../../kyopro_library/template.hpp"
+
 
 namespace random_generator {
     mt19937_64 generate;

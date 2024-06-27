@@ -1,5 +1,5 @@
 #pragma once
-#include "../../kyopro_library/template.hpp"
+
 
 namespace internal {
     template <typename T>

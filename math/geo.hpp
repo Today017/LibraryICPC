@@ -1,4 +1,4 @@
-#include "../../kyopro_library/template.hpp"
+
 
 // geometry
 using Real = long double;

@@ -1,8 +1,4 @@
-#include <bits/stdc++.h>
-using namespace std;
-#include "../kyopro_library/data_structure/fen.hpp"
-#include "../kyopro_library/data_structure/segt.hpp"
-#include "../kyopro_library/data_structure/segtlz.hpp"
+#include <atcoder/all>
 template <typename T1, typename T2>
 ostream &operator<<(ostream &os, const pair<T1, T2> &p) {
     os << "( " << p.first << ", " << p.second << " )";
@@ -129,22 +125,11 @@ ostream &operator<<(ostream &os, priority_queue<T> A) {
     return os;
 }
 template <typename T>
-ostream &operator<<(ostream &os, priority_queue<T, vector<T>, greater<>> A) {
-    int n = A.size();
-    os << "[ ";
-    while (!A.empty()) {
-        os << A.top() << ", ";
-        A.pop();
-    }
-    os << " ]";
-    return os;
-}
-template <typename T>
-ostream &operator<<(ostream &os, fenwick_tree<T> a) {
-    int n = a.size();
+ostream &operator<<(ostream &os, atcoder::fenwick_tree<T> A) {
+    int n = A._n;
     os << "[ ";
     for (int i = 0; i < n; i++) {
-        os << a[i];
+        os << A.sum(i, i + 1);
         if (i != n - 1) {
             os << ", ";
         }
@@ -152,12 +137,12 @@ ostream &operator<<(ostream &os, fenwick_tree<T> a) {
     os << " ]";
     return os;
 }
-template <typename T>
-ostream &operator<<(ostream &os, segment_tree<T> a) {
-    int n = a.size();
+template <typename S, S (*op)(S, S), S (*e)()>
+ostream &operator<<(ostream &os, atcoder::segtree<S, op, e> A) {
+    int n = A._n;
     os << "[ ";
     for (int i = 0; i < n; i++) {
-        os << a[i];
+        os << A.prod(i, i + 1);
         if (i != n - 1) {
             os << ", ";
         }
@@ -165,17 +150,17 @@ ostream &operator<<(ostream &os, segment_tree<T> a) {
     os << " ]";
     return os;
 }
-template <typename T, typename U>
-ostream &operator<<(ostream &os, segment_tree_lazy<T, U> a) {
-    int n = a.size();
-    os << "[ ";
-    for (int i = 0; i < n; i++) {
-        os << a[i];
-        if (i != n - 1) {
-            os << ", ";
-        }
-    }
-    os << " ]";
+ostream &operator<<(ostream &os, atcoder::dsu ds) {
+    os << ds.groups();
+    return os;
+}
+ostream &operator<<(ostream &os, atcoder::modint998244353 x) {
+    os << x.val();
+
+    return os;
+}
+ostream &operator<<(ostream &os, atcoder::modint1000000007 x) {
+    os << x.val();
     return os;
 }
 

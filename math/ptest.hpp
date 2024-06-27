@@ -1,4 +1,4 @@
-#include "../../kyopro_library/template.hpp"
+
 
 bool primality_test(ll n) {
     if (n == 2) {

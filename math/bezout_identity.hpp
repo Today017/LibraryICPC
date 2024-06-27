@@ -1,4 +1,4 @@
-#include "../../kyopro_library/template.hpp"
+
 
 struct bezout_identity {
     ll a, b, c, g;

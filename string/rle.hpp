@@ -1,4 +1,4 @@
-#include "../../kyopro_library/template.hpp"
+
 
 vector<pair<char, int>> run_length_encoding(string s) {
     int n = s.size();

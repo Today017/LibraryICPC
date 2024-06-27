@@ -1,4 +1,4 @@
-#include "../../kyopro_library/template.hpp"
+
 
 vector<ll> divisors(ll n) {
     vector<ll> ret;

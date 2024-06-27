@@ -1,5 +1,3 @@
-#include "../../../kyopro_library/template.hpp"
-
 struct lowest_common_ancestor {
     lowest_common_ancestor(vector<vector<int>> &G, int root = 0) {
         int n = G.size();

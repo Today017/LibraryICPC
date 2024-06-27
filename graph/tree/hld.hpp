@@ -1,5 +1,3 @@
-#include "../../../kyopro_library/template.hpp"
-
 struct heavy_light_decomposition {
     heavy_light_decomposition(int n) {
         G = vector<vector<int>>(n);

@@ -1,4 +1,4 @@
-#include "../../kyopro_library/template.hpp"
+
 
 struct factors {
     factors(int n) {

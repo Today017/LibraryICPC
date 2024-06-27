@@ -1,4 +1,4 @@
-#include "../../kyopro_library/template.hpp"
+
 
 vector<pair<ll, int>> prime_factorize(ll n) {
     vector<pair<ll, int>> ret;

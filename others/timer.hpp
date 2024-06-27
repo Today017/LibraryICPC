@@ -1,5 +1,5 @@
 #pragma once
-#include "../../kyopro_library/template.hpp"
+
 
 struct timer {
     chrono::high_resolution_clock::time_point start;

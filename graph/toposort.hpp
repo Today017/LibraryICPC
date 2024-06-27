@@ -1,4 +1,4 @@
-#include "../../kyopro_library/template.hpp"
+
 
 vector<int> topological_sort(const vector<vector<int>> &G) {
     int n = G.size();
