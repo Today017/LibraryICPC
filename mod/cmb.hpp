@@ -1,5 +1,3 @@
-#include "../../kyopro_library/mod/modint.hpp"
-
 template <typename T>
 struct combination {
     vector<T> fact, factinv;

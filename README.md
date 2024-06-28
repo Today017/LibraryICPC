@@ -1,7 +1,5 @@
 # Library
 
-[Note](./note.md)
-
 ## Algorithm
 
 - [Compress](./algorithm/compress.md)
@@ -15,6 +13,7 @@
 
 ### Segment Tree
 
+- [Segment Tree](./data_structure/segt.md)
 - [Segment Tree 2D](./data_structure/seg2d.md)
 - [Segment Tree Dual](./data_structure/segtd.md)
 - [Segment Tree Beats](./data_structure/beats.md)
@@ -36,6 +35,7 @@
 
 ## Graph
 
+- [Disjoint Set Union](./graph/dsu.md)
 - [SCC](./graph/scc.md)
 - [Topological Sort](./graph/toposort.md)
 
@@ -49,6 +49,11 @@
 
 - [Heavy-Light Decomposition](./graph/tree/hld.md)
 - [Lowest Common Ancestor](./graph/tree/lca.md)
+
+### Flow
+
+- [Max Flow](./graph/flow/mxf.md)
+- [Min Cost Flow](./graph/flow/mcf.md)
 
 ## Mod
 
@@ -82,7 +87,11 @@
 - [Rolling Hash](./string/rh.md)
 
 ## Geometry
-- [All](./geometry/template.md)
+- [Template](./geometry/template.md)
+
+## Parsing
+- [Template](./parsing/template.hpp)
+
 
 ## Others
 - [Random Generator](./others/random.md)

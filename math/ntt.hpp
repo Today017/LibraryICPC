@@ -1,6 +1,3 @@
-
-#include "../../kyopro_library/mod/modint.hpp"
-
 namespace ntt998 {
     const int MOD = 998244353;
     const int PRIMITIVE_ROOT = 3;
