@@ -1,5 +1,3 @@
-
-
 ll pow_mod(ll x, ll n, ll mod) {
     ll ret = 1;
     while (n > 0) {

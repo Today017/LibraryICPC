@@ -1,5 +1,3 @@
-
-
 ll euler_phi(ll n) {
     ll ret = n;
     for (ll i = 2; i * i <= n; i++) {
@@ -38,4 +36,19 @@ ll euler_phi2(ll n) {
         }
     }
     return dp[0];
+}
+
+
+
+vector<ll> euler_phi_table(ll n) {
+    vector<ll> phi(n + 1);
+    iota(phi.begin(), phi.end(), 0);
+    for (ll i = 2; i <= n; i++) {
+        if (phi[i] == i) {
+            for (ll j = i; j <= n; j += i) {
+                phi[j] = phi[j] / i * (i - 1);
+            }
+        }
+    }
+    return phi;
 }
