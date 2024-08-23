@@ -17,17 +17,39 @@
 
 ## Structure
 
+### Point
+
 `Point(long double x, long double y)`
 - 二次元平面状の位置ベクトル $(x, y)$
 
----
+`Point::dot(Point p)`
+- $p$ との内積を返す。
+
+`Point::cross(Point p)`
+- $p$ との外積を返す。
+
+`Point::cross(Point p1, Point p2)`
+- $p1$ と $p2$ を端点とするベクトルとの外積を返す。
+
+`Point::norm()`
+- ベクトルの長さの二乗を返す。
+
+`Point::abs()`
+- ベクトルの長さを返す。
+
+`Point::arg()`
+- ベクトルの偏角を返す。
+
+
+
+### Segment
 
 `Segment(Point a, Point b)`
 
 `Segment(long double A, long double B, long double C)`
 - 線分
 
----
+### Line
 
 `Line(Point a, Point b)`
 
@@ -36,7 +58,7 @@
 
 (一般には==が壊れるので注意)
 
----
+### Circle
 
 `Circle(long double x, long double y, long double r)`
 
@@ -44,6 +66,8 @@
 - 円
 
 ## Point and Vector
+
+### Counter Clockwise
 
 `Orientation ccw(Point p0, Point p1, Point p2)`
 - 点の進行方向
@@ -58,118 +82,143 @@ enum Orientation {
 };
 ```
 
---- 
+### 射影
 
 `Point projection(Point p1, Point p2, Point p)`
 
 `Point projection(Line l, Point p)`
-- 射影
 
----
+
+### 反射
 
 `Point reflection(Point p1, Point p2, Point p)`
 
 `Point reflection(Line l, Point p)`
-- 反射
 
 ## Segment and Line
 
+### 平行判定
+
 `bool isParallel(Line(Segment) l1, Line(Segment) l2)`
-- 平行判定
+
+### 垂直判定
 
 `bool isOrthogonal(Line(Segment) l1, Line(Segment) l2)`
-- 垂直判定
 
 ---
 
-`bool isPointOnLine(Point p, Line l)`
-- 直線上に点が存在するか判定
+### 直線上に点が存在するか判定
 
+`bool isPointOnLine(Point p, Line l)`
+
+### 線分上に点が存在するか判定
 
 `bool isPointOnSegment(Point p, Line l)`
-- 線分上に点が存在するか判定
+
+### 線分と線分の交差
 
 `bool isIntersecting(Segment s1, Segment s2)`
-- 線分の交差判定
+
+### 線分と線分の交点
 
 `Point getIntersection(Segment s1, Segment s2)`
-- 二つの線分の交点を返す
 
 --- 
 
+### 点と直線の距離
+
 `long double distancePointToSegment(Point p, Segment s)`
-- 点と線分の距離
+
+### 線分と線分の距離
 
 `long double distanceSegmentToSegment(Segment s1, Segment s2)`
-- 線分と線分の距離
 
 ## Polygon
 
+### 多角形の面積
+
 `long double getPolygonArea(vector<Point> points)`
-- 多角形の面積を求める
 
 ---
+
+### 凸多角形の判定
 
 `bool isConvex(vector<Point> points)`
-- 凸多角形かどうかの判定
 
 ---
 
+### 点が凸多角形の辺上に存在するか判定
+
 `bool isPointOnPolygon(vector<Point> polygon, Point p)`
-- 点が凸多角形の辺上に存在するか判定
+
+### 点が凸多角形の内部に存在するか判定
 
 `bool isPointInsidePolygon(vector<Point> polygon, Point p)`
-- 点が凸多角形の内部に存在するか判定(たまに↑を包含するっぽい)
+- たまに↑を包含
 
 ## Convex Polygon
 
+### 凸包
+
 `vector<Point> convexHull(vector<Point> points, bool include_collinear = false)`
-- 凸包
 
 ---
+
+### 凸包の直径
+
 `long double convexHullDiameter(vector<Point> hull)`
-- 凸包の直径
 
 ---
+
+### 凸包をカットして左側を返す
+
 `vector<Point> cutPolygon(vector<Point> g, Point p1, Point p2)`
-- 凸包をカットして左側を返す
 
 ## Point Set
 
+### 最近点対
+
 `long double closestPair(vector<Point> points, int l, int r)`
-- 最近点対
-（x座標の値でソートされた点列を渡す）
+- x座標の値でソートされた点列を渡す
 
 ## Segment Set
 
+### 線分集合の交点の個数
+
 `int countIntersections(vector<Segment> segments)`
-- 線分集合の交点の個数を返す
 
 ## Circle
 
+### 2つの円の交点の個数
+
 `int countCirclesIntersection(Circle c1, Circle c2)`
-- 二つの円の交点の個数
 
 ---
+
+### 内接円
 
 `Circle getInCircle(Point A, Point B, Point C)`
-- 内接円の取得 
 
 ---
+
+### 外接円
 
 `Circle getCircumCircle(Point A, Point B, Point C)`
-- 外接円の取得
 
 ---
 
+### 円と直線の交点
+
 `vector<Point> getCircleLineIntersection(Circle c, Point p1, Point p2)`
-- 円と直線の交点の取得
+
+### 2つの円の交点
 
 `vector<Point> getCirclesIntersect(Circle c1, Circle c2)`
-- 二つの円の交点の取得
+
+### 点 $p$ を通る接線との接点
 
 `vector<Point> getTangentLinesFromPoint(Circle c, Point p)`
-- 点$p$を通る接線との交点を取得
+
+### 2つの円の共通接線
 
 `vector<Segment> getCommonTangentsLine(Circle c1, Circle c2)`
-- 二つの円の共通接線を取得

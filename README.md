@@ -31,7 +31,7 @@
 - [Fenwick Tree (/data_structure/fen.hpp)](./data_structure/fen.md)
 - [Binary Trie (/data_structure/bintr.hpp)](./data_structure/bintr.md)
 - [Wavelet Matrix (/data_structure/wvmt.hpp)](./data_structure/wvmt.md)
-- [Insertable Reversible Array　挿入反転削除可能配列 (/data_structure/insrev.hpp)](./data_structure/insrev.md)
+- [Insertable Reversible Array 挿入反転削除可能配列 (/data_structure/insrev.hpp)](./data_structure/insrev.md)
 
 ## Graph
 
@@ -42,13 +42,13 @@
 ### Shortest Path
 
 - [Dijkstra (/graph/sp/dij.hpp)](./graph/sp/dij.md)
-- [Bellman Ford (graph/sp/bf.hpp)](./graph/sp/bf.md)
-- [Warshall Floyd (graph/sp/wf.hpp)](./graph/sp/wf.md)
+- [Bellman Ford (/graph/sp/bf.hpp)](./graph/sp/bf.md)
+- [Warshall Floyd (/graph/sp/wf.hpp)](./graph/sp/wf.md)
 
 ### Tree
 
-- [Heavy-Light Decomposition (graph/tree/hld.hpp)](./graph/tree/hld.md)
-- [Lowest Common Ancestor (graph/tree/lca.hpp)](./graph/tree/lca.md)
+- [Heavy-Light Decomposition (/graph/tree/hld.hpp)](./graph/tree/hld.md)
+- [Lowest Common Ancestor (/graph/tree/lca.hpp)](./graph/tree/lca.md)
 
 ### Flow
 
